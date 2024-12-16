@@ -1,0 +1,127 @@
+# GitHub Administration
+
+## GitHub Projects
+- Organize tasks, tracks progress
+- Enhances collaboration
+- Simplifies tracking
+- Integrates with issues & PRs
+- Centralized Management
+- Customizable boards
+
+### Setting up a GitHub Projects
+Projects tab > New project > Select template > Name project > Organize workflow > Add cards
+
+### Managing Project Visibility
+- Public
+- Private
+
+### Managing Project Accessibility
+- Admin (Full control)
+- Write
+- Read
+- No Access
+
+## Automation
+
+### GitHub Actions vs. Insights
+- GitHub Actions work on the code base, Insights act upon the project boards
+
+### GitHub Actions
+- Streamlines: Automates workflows
+- Automation: Simplifies processes
+- Automates complex workflows
+- Tag and manage tasks efficiently
+- Trigger tasks on code events
+- YAML-powered: Define actions in YAML
+- Schedule common tasks like data pipelines or deploying ML models
+
+### Built-in Automation
+- auto-move tasks based on events
+- keeps boards updated automatically
+
+### Insights
+- Real-time data: Tracks progress
+- Spots issues
+- Chart types: current and historical charts
+
+
+## Administration
+
+### GitHub Organizations 
+- Centralized workspace
+- Role-based access
+- Security policies
+
+### Organization Plans
+- Free
+- Team
+- Enterprise
+
+### Key Roles
+- Owner: Full-control
+- Member: Standard access
+- Outside Collaborator: Limited repo access
+
+### Additional Roles
+- Moderator: Manages interactions in public repos
+- Billing Manager: Handles billing settings
+- Security Manager: Oversees security settings
+
+### Managing Teams
+- Simplify management
+- Created by Owners and Members
+- Organize groups by projects, roles, or departments
+- Nested Teams: Reflect internal hierarchies
+
+### Team Roles
+- Team Member: Collaborates on projects
+- Team Maintainer: Manages settings and Members
+- Best to assign permissions to teams and not individuals
+
+### Repository Roles
+- Read: View and discuss`
+- Traige: Manage issues/pull requests
+- Write: Push code
+- Maintain: Manage without sensitive actions
+- Admin: Full control
+
+## Authentication
+
+### 2-Factor Authentication (2FA)
+- Members must login with username and password + a second form of Authentication
+- If set by admin in the org then members will be kicked out until setting up 2FA
+- Security Keys: Most Secured
+- TOTP: Trusted app
+- SMS: text codes
+- GitHub Mobile
+
+### SAML Single Sign-On (SSO)
+- One secure login for multiple apps
+- Need to set up a SAML IdP (Okta, Entra ID, OneLogin)
+
+### Personal Access Tokens (PAT)
+- Codes replacing passwords for API access
+- Classic and Fine-Grained
+- Used for Secured Socket Shell (SSH) connections
+
+### OAuth Authorization Model
+- Secure, limited access for apps
+- Used for connecting data tools to GitHub
+
+
+## Team Synchronization
+- Automatically links GitHub teams to IdP groups
+- Requires GitHub Enterprise Cloud or an IdP (Okta, Azure AD, etc.)
+- Adheres to security adjustments in IdP
+- Scalability
+
+- Azure AD Group settings > GitHub Organization Settings > Authentication security > Enable SAML Authentication > Setup Team > Select Identity Provider Groups
+
+## Onboarding Employees
+- Invite employee to Organization
+- Assign member roles
+- Request 2FA setup
+- IdP automates the rest
+
+## Offboarding Employees
+- Remove from IdP
